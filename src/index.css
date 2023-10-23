@@ -1,0 +1,72 @@
+
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #022959;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-input {
+  outline: none;
+
+}
+.form-input:hover{
+  border: 2px solid #483EFF; 
+
+}
+.form-input:focus{
+  border: 2px solid #483EFF; 
+  
+}
+
+/* NEXT BUTTON   */
+.next-button:hover{
+  background:#446fa3;
+
+}
+.next-button:focus{
+  background:#446fa3;
+}
+
+.next-button:disabled{
+  background:#c55951;
+}
+
+/*  PLAN  */
+.plan:hover{
+  border : 1px solid #483EFF ; 
+  background: #F8F9FF;
+
+}
+.plan:focus{
+  border : 1px solid #483EFF ; 
+  background: #F8F9FF;
+
+}
+
+/* ADDON */
+.addon:hover{
+  border : 1px solid #483EFF ; 
+}
+
+.addon:focus{
+  border : 1px solid #483EFF ; 
+}
+
+
+
