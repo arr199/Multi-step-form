@@ -1,13 +1,14 @@
-import z, { type SafeParseReturnType, string } from 'zod'
+import z, { type SafeParseReturnType, string, type SafeParseError } from 'zod'
 
-type InfoSchema = z.infer<typeof infoSchema>
+export type InfoSchema = z.infer<typeof infoSchema>
 
 export const infoSchema = z.object({
-  name: string().min(1),
-  email: string().min(1).email(),
-  phone: string().min(1)
+  name: string().min(1, { message: 'This field is required' }),
+  email: string().min(1, { message: 'This field is required' }).email({ message: 'Provide a valid email' }),
+  phone: string().min(1, { message: 'This field is required' }).regex(/^\+?\d+$/, { message: 'Provide a valid phone number' })
+
 })
 
-export function validateInfo (object: InfoSchema): SafeParseReturnType<InfoSchema, InfoSchema> {
+export function validateInfo (object: InfoSchema): SafeParseReturnType<InfoSchema, InfoSchema> | SafeParseError<InfoSchema> {
   return infoSchema.safeParse(object)
 }

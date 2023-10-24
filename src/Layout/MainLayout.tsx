@@ -11,7 +11,7 @@ function MainLayout (): JSX.Element {
                   bg-[url("/images/bg-sidebar-mobile.svg")] md:bg-[url("/images/bg-sidebar-desktop.svg")] bg-cover'>
           <ul className='flex flex-row md:flex-col gap-8 text-white justify-center md:mb-0 mb-10 '>
             <Steps route="/" number={1} text="your info" ></Steps>
-            <Steps route="/plan" number={2} text="select plan" ></Steps>
+            <Steps route="/plans" number={2} text="select plan" ></Steps>
             <Steps route="/addons" number={3} text="add-ons" ></Steps>
             <Steps route="/summary" number={4} text="summary" ></Steps>
           </ul>

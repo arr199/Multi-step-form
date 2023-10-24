@@ -50,12 +50,12 @@
 /*  PLAN  */
 .plan:hover{
   border : 1px solid #483EFF ; 
-  background: #F8F9FF;
+  background: #e7eafd;
 
 }
 .plan:focus{
   border : 1px solid #483EFF ; 
-  background: #F8F9FF;
+  background: #e7eafd;
 
 }
 
