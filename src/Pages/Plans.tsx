@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
-import Plan from '../components/Plan'
-import PlanSwitch from '../components/PlanSwitch'
+import Plan from '../components1/Plan'
+import PlanSwitch from '../components1/PlanSwitch'
 import API from '../utils/API'
 import { useSnapshot } from 'valtio'
 import store from '../store/store'

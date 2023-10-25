@@ -3,7 +3,7 @@ import { useSnapshot } from 'valtio'
 import store, { actions } from '../store/store'
 import { validateInfo } from '../utils/ValidationsSchemas'
 import { useEffect, useState } from 'react'
-import InfoInput from '../components/InfoInputs'
+import InfoInput from '../components1/InfoInputs'
 
 function Info (): JSX.Element {
   const navigate = useNavigate()
