@@ -11,11 +11,14 @@ function MainLayout (): JSX.Element {
   const snap = useSnapshot(store)
   const { infoFormData } = snap
 
-  // IF THE USER USE THE URL TO GO THE NEXT PAGE IS REDIRECTED TO THE FIRST PAGE
   useEffect(() => {
     const validationResult = validateInfo(infoFormData)
     if (!validationResult.success && location.pathname !== '/') {
       navigate('/')
+    }
+
+    if (validationResult.success && location.pathname !== '/' && snap.selectedPlan.name === '') {
+      navigate('/plans')
     }
   }, [navigate])
 

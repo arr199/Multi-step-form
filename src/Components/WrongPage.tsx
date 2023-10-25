@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 function WrongPage (): JSX.Element {
   const navigate = useNavigate()
+
   useEffect(() => {
     navigate('/')
   }, [])

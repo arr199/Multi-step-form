@@ -15,9 +15,9 @@ function Plan ({ icon, name, price }: { icon: string, name: string, price: numbe
         {/* PRICE */}
         <span className='text-[0.875rem] text-[#9699AA]'>$
           {snap.billingPlan === 'monthly' ? `${price}/mo` : `${price * 10}/yr`}
-        {/* PROMOTION */}
+          {/* PROMOTION */}
         </span>
-          {snap.billingPlan === 'yearly' && <span className='text-[0.75rem] font-bold  whitespace-nowrap'>2 months free
+        {snap.billingPlan === 'yearly' && <span className='text-[0.75rem] font-bold  whitespace-nowrap'>2 months free
         </span>}
       </div>
     </div>
