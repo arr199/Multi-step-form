@@ -41,10 +41,6 @@ npm install
 - Run server
 
 ```sh
- npm run 
-
-
-
-
-
+ npm run  dev
+```
 
