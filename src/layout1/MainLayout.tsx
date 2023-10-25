@@ -1,7 +1,7 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
-import Steps from '../components1/Steps'
+import Steps from '../components/Steps'
 import { useEffect } from 'react'
-import { validateInfo } from '../utils/ValidationsSchemas'
+import { validateInfo } from '../utils1/ValidationsSchemas'
 import { useSnapshot } from 'valtio'
 import store from '../store/store'
 

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
-import Addon from '../components1/Addon'
-import API from '../utils/API'
+import Addon from '../components/Addon'
+import API from '../utils1/API'
 import { useEffect } from 'react'
 import { useSnapshot } from 'valtio'
 import store from '../store/store'

@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { useSnapshot } from 'valtio'
 import store, { actions } from '../store/store'
-import { validateInfo } from '../utils/ValidationsSchemas'
+import { validateInfo } from '../utils1/ValidationsSchemas'
 import { useEffect, useState } from 'react'
-import InfoInput from '../components1/InfoInputs'
+import InfoInput from '../components/InfoInputs'
 
 function Info (): JSX.Element {
   const navigate = useNavigate()

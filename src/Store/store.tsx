@@ -1,5 +1,5 @@
 import { proxy } from 'valtio'
-import { STATES } from '../utils/API'
+import { STATES } from '../utils1/API'
 
 // STATES
 const store = proxy<Store>({
