@@ -1,9 +1,9 @@
-#  - Multi-step form
+ <h1> Multi-step form </h1>  
 
  <img width="50%" src="./public/images/preview.jpg" />
 
 
-# Built with 
+## Built with 
 - [React](https://react.dev/) - A JavaScript library that allows you to create user interfaces.
 - [TypeScript](https://www.typescriptlang.org/) -  A strongly typed programming language that builds on JavaScript.
 - [Tailwind-css](https://tailwindcss.com/) - A utility-first CSS framework.
@@ -12,7 +12,7 @@
 - [Vite](https://vitejs.dev/) - A tool that is used for building fast and optimized web applications. 
 
 
-# Features 
+## Features 
 
 - User must complete each step of the sequence.
 - Go back to a previous step to update their selections.
@@ -29,7 +29,7 @@
 - Clone the repository
 
 ```sh
-git clone https://github.com/arr199/Task-management-app
+git clone https://github.com/arr199/Multi-step-form
 ```
 
 - Install dependencies
