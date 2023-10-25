@@ -26,3 +26,10 @@ interface Issue {
   message: string
   path: string[]
 }
+
+interface InfoInputProps {
+  value: string
+  error: string
+  setValue: (e: React.ChangeEvent) => void
+  name: string
+}

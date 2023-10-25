@@ -14,17 +14,17 @@ const store = proxy<Store>({
 // ACTIONS
 export const actions = {
   // PERSONAL INFO PAGE
-  setName (e: React.ChangeEvent) {
+  setName (e: React.ChangeEvent): void {
     store.infoFormData.name = (e.target as HTMLInputElement).value
   },
-  setEmail (e: React.ChangeEvent) {
+  setEmail (e: React.ChangeEvent): void {
     store.infoFormData.email = (e.target as HTMLInputElement).value.trim()
   },
-  setPhone (e: React.ChangeEvent) {
+  setPhone (e: React.ChangeEvent): void {
     store.infoFormData.phone = (e.target as HTMLInputElement).value.trim()
   },
   // BILLING PLAN
-  setBillingPlan () {
+  setBillingPlan (): void {
     if (store.billingPlan === 'monthly') {
       store.billingPlan = 'yearly'
     } else {
@@ -32,22 +32,22 @@ export const actions = {
     }
   },
   // SET SELECTED PLAN
-  setPlan ({ name, price }: { name: string, price: number }) {
+  setPlan ({ name, price }: { name: string, price: number }): void {
     store.selectedPlan.name = name
     store.selectedPlan.price = price
   },
   // SET ADDONS
-  setAddons (index: number) {
+  setAddons (index: number): void {
     if (store.addons[index].selected) {
       store.addons[index].selected = false
     } else {
       store.addons[index].selected = true
     }
   },
-  clearLocalStorage () {
+  clearLocalStorage (): void {
     localStorage.clear()
   },
-  showThankYouPage () {
+  showThankYouPage (): void {
     store.showThankYouPage = true
   }
 

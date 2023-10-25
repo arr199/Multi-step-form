@@ -1,4 +1,4 @@
-function InfoInput ({ value, error, setValue, name }: { value: string, error: string, setValue: any, name: string }): JSX.Element {
+function InfoInput ({ value, error, setValue, name }: InfoInputProps): JSX.Element {
   return (
     <div className='flex flex-col relative'>
       <label className="font-medium capitalize" htmlFor="">{name}</label>
