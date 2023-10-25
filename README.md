@@ -2,6 +2,7 @@
 
  <img width="50%" src="./public/images/preview.jpg" />
 
+ ## Website https://multi-step-form-arr.netlify.app/
 
 ## Built with 
 - [React](https://react.dev/) - A JavaScript library that allows you to create user interfaces.
@@ -41,6 +42,6 @@ npm install
 - Run server
 
 ```sh
- npm run  dev
+ npm run dev
 ```
 
