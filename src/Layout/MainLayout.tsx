@@ -1,7 +1,24 @@
-import { Outlet } from 'react-router-dom'
-import Steps from '../Components/Steps'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import Steps from '../components/Steps'
+import { useEffect } from 'react'
+import { validateInfo } from '../utils/ValidationsSchemas'
+import { useSnapshot } from 'valtio'
+import store from '../store/store'
 
 function MainLayout (): JSX.Element {
+  const location = useLocation()
+  const navigate = useNavigate()
+  const snap = useSnapshot(store)
+  const { infoFormData } = snap
+
+  // IF THE USER USE THE URL TO GO THE NEXT PAGE IS REDIRECTED TO THE FIRST PAGE
+  useEffect(() => {
+    const validationResult = validateInfo(infoFormData)
+    if (!validationResult.success && location.pathname !== '/') {
+      navigate('/')
+    }
+  }, [navigate])
+
   return (
     <main className='bg-[#EFF5FF] h-screen w-full flex flex-col  md:justify-center items-center relative'>
       {/* WHOLE CONTAINER */}
@@ -20,9 +37,7 @@ function MainLayout (): JSX.Element {
         <div className=' min-h-max md:h-full w-[90%] absolute top-32 md:top-0 md:static bg-white rounded-lg md:rounded pb-2'>
           <Outlet></Outlet>
         </div>
-
       </div>
-
     </main>
   )
 }

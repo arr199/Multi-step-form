@@ -1,5 +1,5 @@
 import { useSnapshot } from 'valtio'
-import store, { actions } from '../Store/store'
+import store, { actions } from '../store/store'
 
 // INDIVIDUAL PLAN
 function Plan ({ icon, name, price }: { icon: string, name: string, price: number }): JSX.Element {

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useSnapshot } from 'valtio'
-import store, { actions } from '../Store/store'
+import store, { actions } from '../store/store'
 import React from 'react'
 
 function Summary (): JSX.Element {

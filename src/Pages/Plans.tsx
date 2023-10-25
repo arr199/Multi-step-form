@@ -1,19 +1,23 @@
 import { Link, useNavigate } from 'react-router-dom'
-import Plan from '../Components/Plan'
-import PlanSwitch from '../Components/PlanSwitch'
-import API from '../Utils/API'
+import Plan from '../components/Plan'
+import PlanSwitch from '../components/PlanSwitch'
+import API from '../utils/API'
 import { useSnapshot } from 'valtio'
-import store from '../Store/store'
+import store from '../store/store'
+import { useEffect } from 'react'
 
 function Plans (): JSX.Element {
   const navigate = useNavigate()
   const snap = useSnapshot(store)
-
+  const { selectedPlan, billingPlan } = snap
   function handleNextStep (e: React.FormEvent): void {
     e.preventDefault()
     navigate('/addons')
   }
-
+  useEffect(() => {
+    localStorage.setItem('selectedPlan', JSON.stringify(snap.selectedPlan))
+    localStorage.setItem('billingPlan', JSON.stringify(snap.billingPlan))
+  }, [selectedPlan, billingPlan])
   return (
         <form onSubmit={handleNextStep} className="static w-[80%]  flex mx-auto  flex-col  pb-4 mt-4 md:mt-8 [&>label]:text-[0.875rem] h-full ">
             <h1 className="md:text-[2rem] text-[1.425rem] font-bold">Select your plan</h1>

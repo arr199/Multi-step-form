@@ -1,9 +1,10 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import MainLayout from './Layout/MainLayout'
-import Info from './Pages/Info'
-import Plans from './Pages/Plans'
-import Addons from './Pages/Addons'
-import Summary from './Pages/Summary'
+import MainLayout from './layout/MainLayout'
+import Info from './pages/Info'
+import Plans from './pages/Plans'
+import Addons from './pages/Addons'
+import Summary from './pages/Summary'
+import WrongPage from './components/WrongPage'
 
 function Router (): JSX.Element {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -12,7 +13,10 @@ function Router (): JSX.Element {
             <Route path='plans' element={<Plans></Plans>} ></Route>
             <Route path='addons' element={<Addons></Addons>} ></Route>
             <Route path='summary' element={<Summary></Summary>} ></Route>
+            <Route path='*' element={<WrongPage></WrongPage>}></Route>
+
     </Route>
+
   ))
 
   return <RouterProvider router={router}></RouterProvider>

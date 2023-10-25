@@ -1,12 +1,12 @@
 import { proxy } from 'valtio'
-import { STATES } from '../Utils/API'
+import { STATES } from '../utils/API'
 
 // STORE
 const store = proxy({
-  infoFormData: STATES.INITIAL_INFO_FORM_DATA,
-  selectedPlan: STATES.INITIAL_SELECTED_PLAN,
-  billingPlan: STATES.INITIAL_BILLING_PLAN,
-  addons: STATES.INITIAL_SELECTED_ADDONS
+  infoFormData: JSON.parse(localStorage.getItem('infoFormData') as string) ?? STATES.INITIAL_INFO_FORM_DATA,
+  selectedPlan: JSON.parse(localStorage.getItem('selectedPlan') as string) ?? STATES.INITIAL_SELECTED_PLAN,
+  billingPlan: JSON.parse(localStorage.getItem('billingPlan') as string) ?? STATES.INITIAL_BILLING_PLAN,
+  addons: JSON.parse(localStorage.getItem('addons') as string) ?? STATES.INITIAL_SELECTED_ADDONS
 
 })
 
@@ -37,7 +37,11 @@ export const actions = {
   },
   // SET ADDONS
   setAddons (index: number) {
-    store.addons[index].selected = !store.addons[index].selected
+    if (store.addons[index].selected === true) {
+      store.addons[index].selected = false
+    } else {
+      store.addons[index].selected = true
+    }
   }
 
 }
