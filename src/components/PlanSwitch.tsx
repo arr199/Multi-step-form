@@ -1,6 +1,6 @@
 import { PiToggleRightFill, PiToggleLeftFill } from 'react-icons/pi'
 import { useSnapshot } from 'valtio'
-import store, { actions } from '../store1/store'
+import store, { actions } from '../store/store'
 
 function PlanSwitch (): JSX.Element {
   const snap = useSnapshot(store)

@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useSnapshot } from 'valtio'
-import store, { actions } from '../store1/store'
+import store, { actions } from '../store/store'
 import React, { useEffect } from 'react'
-import { validateInfo } from '../utils1/ValidationsSchemas'
+import { validateInfo } from '../utils/ValidationsSchemas'
 
 function Summary (): JSX.Element {
   const snap = useSnapshot(store)

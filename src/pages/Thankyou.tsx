@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { actions } from '../store1/store'
+import { actions } from '../store/store'
 
 function Thankyou (): JSX.Element {
   useEffect(() => {

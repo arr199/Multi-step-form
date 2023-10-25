@@ -1,9 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom'
 import Plan from '../components/Plan'
 import PlanSwitch from '../components/PlanSwitch'
-import API from '../utils1/API'
+import API from '../utils/API'
 import { useSnapshot } from 'valtio'
-import store from '../store1/store'
+import store from '../store/store'
 import { useEffect } from 'react'
 
 function Plans (): JSX.Element {

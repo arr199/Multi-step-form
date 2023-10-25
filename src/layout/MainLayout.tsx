@@ -1,9 +1,9 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import Steps from '../components/Steps'
 import { useEffect } from 'react'
-import { validateInfo } from '../utils1/ValidationsSchemas'
+import { validateInfo } from '../utils/ValidationsSchemas'
 import { useSnapshot } from 'valtio'
-import store from '../store1/store'
+import store from '../store/store'
 
 function MainLayout (): JSX.Element {
   const location = useLocation()
