@@ -3,7 +3,7 @@ import Plan from '../components/Plan'
 import PlanSwitch from '../components/PlanSwitch'
 import API from '../utils1/API'
 import { useSnapshot } from 'valtio'
-import store from '../store/store'
+import store from '../store1/store'
 import { useEffect } from 'react'
 
 function Plans (): JSX.Element {

@@ -3,7 +3,7 @@ import Steps from '../components/Steps'
 import { useEffect } from 'react'
 import { validateInfo } from '../utils1/ValidationsSchemas'
 import { useSnapshot } from 'valtio'
-import store from '../store/store'
+import store from '../store1/store'
 
 function MainLayout (): JSX.Element {
   const location = useLocation()

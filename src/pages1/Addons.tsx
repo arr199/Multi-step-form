@@ -3,7 +3,7 @@ import Addon from '../components/Addon'
 import API from '../utils1/API'
 import { useEffect } from 'react'
 import { useSnapshot } from 'valtio'
-import store from '../store/store'
+import store from '../store1/store'
 
 function Addons (): JSX.Element {
   const navigate = useNavigate()

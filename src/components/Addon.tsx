@@ -1,5 +1,5 @@
 import { useSnapshot } from 'valtio'
-import store, { actions } from '../store/store'
+import store, { actions } from '../store1/store'
 
 function Addon ({ name, description, price, index }: { name: string, description: string, price: number, index: number }): JSX.Element {
   const snap = useSnapshot(store)

@@ -7,7 +7,7 @@ import Summary from './pages1/Summary'
 import WrongPage from './components/WrongPage'
 import Thankyou from './pages1/Thankyou'
 import { thankYouPageloader } from './utils1/Loaders'
-import store from './store/store'
+import store from './store1/store'
 import { useSnapshot } from 'valtio'
 
 function Router (): JSX.Element {

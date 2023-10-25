@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useSnapshot } from 'valtio'
-import store, { actions } from '../store/store'
+import store, { actions } from '../store1/store'
 import { validateInfo } from '../utils1/ValidationsSchemas'
 import { useEffect, useState } from 'react'
 import InfoInput from '../components/InfoInputs'
