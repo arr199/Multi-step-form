@@ -9,6 +9,7 @@
 - [TypeScript](https://www.typescriptlang.org/) -  A strongly typed programming language that builds on JavaScript.
 - [Tailwind-css](https://tailwindcss.com/) - A utility-first CSS framework.
 - [React-Router](https://reactrouter.com/en/main) - A tool that allows you to create routes, navigation, and page-switching in your React web applications.
+- [Valtio](https://valtio.pmnd.rs/) - A state management library.
 - [Zod](https://zod.dev/) - A javascript validation library
 - [Vite](https://vitejs.dev/) - A tool that is used for building fast and optimized web applications. 
 
