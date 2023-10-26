@@ -1,13 +1,7 @@
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 function WrongPage (): JSX.Element {
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    navigate('/')
-  }, [])
-  return <div className="bg-white absolute inset-0"></div>
+  return <Navigate to="/"></Navigate>
 }
 
 export default WrongPage

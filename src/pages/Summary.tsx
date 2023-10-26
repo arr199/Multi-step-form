@@ -7,17 +7,13 @@ import { validateInfo } from '../utils/ValidationsSchemas'
 function Summary (): JSX.Element {
   const snap = useSnapshot(store)
   const navigate = useNavigate()
-  const { billingPlan, showThankYouPage } = snap
+  const { showThankYouPage } = snap
   const selectedAddons = snap.addons.filter((addon) => addon.selected) ?? []
 
   function handleConfirm (e: React.FormEvent): void {
     e.preventDefault()
     actions.showThankYouPage()
   }
-
-  useEffect(() => {
-    localStorage.setItem('billingPlan', JSON.stringify(snap.billingPlan))
-  }, [billingPlan])
 
   //   GO TO THANK YOU PAGE AFTER THE STATE CHANGES
   useEffect(() => {
@@ -39,6 +35,7 @@ function Summary (): JSX.Element {
                     {/* CHANGE */}
                     <button type='button' onClick={() => {
                       actions.setBillingPlan()
+                      localStorage.setItem('billingPlan', JSON.stringify(snap.billingPlan))
                     }}
                         className='self-start text-[#9699AA] underline underline-offset-4 decoration-2 text-[0.875rem] hover:text-[#483EFF] hover:font-bold focus:text-[#483EFF]' >Change</button>
                 </div>

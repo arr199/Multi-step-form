@@ -1,10 +1,7 @@
-import { useEffect } from 'react'
 import { actions } from '../store/store'
 
 function Thankyou (): JSX.Element {
-  useEffect(() => {
-    actions.clearLocalStorage()
-  }, [])
+  actions.clearLocalStorage()
 
   return (
     <div className='absolute md:static bg-white flex flex-col px-8 justify-center h-[70vh] md:h-full text-center gap-4 items-center rounded-lg'>
