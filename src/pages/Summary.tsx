@@ -35,7 +35,6 @@ function Summary (): JSX.Element {
                     {/* CHANGE */}
                     <button type='button' onClick={() => {
                       actions.setBillingPlan()
-                      localStorage.setItem('billingPlan', JSON.stringify(snap.billingPlan))
                     }}
                         className='self-start text-[#9699AA] underline underline-offset-4 decoration-2 text-[0.875rem] hover:text-[#483EFF] hover:font-bold focus:text-[#483EFF]' >Change</button>
                 </div>

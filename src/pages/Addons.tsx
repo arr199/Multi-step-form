@@ -1,23 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom'
 import Addon from '../components/Addon'
 import API from '../utils/API'
-import { useEffect } from 'react'
-import { useSnapshot } from 'valtio'
-import store from '../store/store'
 
 function Addons (): JSX.Element {
   const navigate = useNavigate()
-  const snap = useSnapshot(store)
-  const { addons } = snap
 
   function handleNextStep (e: React.FormEvent): void {
     e.preventDefault()
     navigate('/summary')
   }
-
-  useEffect(() => {
-    localStorage.setItem('addons', JSON.stringify(addons))
-  }, [addons])
 
   return (
     <form onSubmit={handleNextStep} className="static flex flex-col text-[#022959] w-full px-4 sm:px-8  mt-8 [&>label]:text-[0.875rem]  h-full ">

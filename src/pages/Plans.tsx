@@ -4,21 +4,15 @@ import PlanSwitch from '../components/PlanSwitch'
 import API from '../utils/API'
 import { useSnapshot } from 'valtio'
 import store from '../store/store'
-import { useEffect } from 'react'
 
 function Plans (): JSX.Element {
   const navigate = useNavigate()
   const snap = useSnapshot(store)
-  const { selectedPlan, billingPlan } = snap
 
   function handleNextStep (e: React.FormEvent): void {
     e.preventDefault()
     navigate('/addons')
   }
-  useEffect(() => {
-    localStorage.setItem('selectedPlan', JSON.stringify(snap.selectedPlan))
-    localStorage.setItem('billingPlan', JSON.stringify(snap.billingPlan))
-  }, [selectedPlan, billingPlan])
 
   return (
     <form onSubmit={handleNextStep} className="static w-[80%]  flex mx-auto  flex-col  pb-4 mt-4 md:mt-8 [&>label]:text-[0.875rem] h-full ">

@@ -2,13 +2,12 @@ import { useNavigate } from 'react-router-dom'
 import { useSnapshot } from 'valtio'
 import store, { actions } from '../store/store'
 import { validateInfo } from '../utils/ValidationsSchemas'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import InfoInput from '../components/InfoInputs'
 
 function Info (): JSX.Element {
   const navigate = useNavigate()
   const snap = useSnapshot(store)
-  const { infoFormData } = snap
   const [error, setError] = useState<Record<string, string>>({ name: '', email: '', phone: '' })
 
   function handleNextStep (e: React.FormEvent): void {
@@ -27,10 +26,6 @@ function Info (): JSX.Element {
       navigate('/plans')
     }
   }
-
-  useEffect(() => {
-    localStorage.setItem('infoFormData', JSON.stringify(snap.infoFormData))
-  }, [infoFormData])
 
   return (
     <form onChange={() => { setError({ name: '', email: '', phone: '' }) }} onSubmit={handleNextStep} className="static flex flex-col  w-full px-8  mt-8 [&>label]:text-[0.875rem]">

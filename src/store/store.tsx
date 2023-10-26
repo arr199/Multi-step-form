@@ -16,13 +16,17 @@ export const actions = {
   // PERSONAL INFO PAGE
   setName (e: React.ChangeEvent): void {
     store.infoFormData.name = (e.target as HTMLInputElement).value
+    localStorage.setItem('infoFormData', JSON.stringify(store.infoFormData))
   },
   setEmail (e: React.ChangeEvent): void {
     store.infoFormData.email = (e.target as HTMLInputElement).value.trim()
+    localStorage.setItem('infoFormData', JSON.stringify(store.infoFormData))
   },
   setPhone (e: React.ChangeEvent): void {
     store.infoFormData.phone = (e.target as HTMLInputElement).value.trim()
+    localStorage.setItem('infoFormData', JSON.stringify(store.infoFormData))
   },
+
   // BILLING PLAN
   setBillingPlan (): void {
     if (store.billingPlan === 'monthly') {
@@ -30,11 +34,13 @@ export const actions = {
     } else {
       store.billingPlan = 'monthly'
     }
+    localStorage.setItem('billingPlan', JSON.stringify(store.billingPlan))
   },
   // SET SELECTED PLAN
   setPlan ({ name, price }: { name: string, price: number }): void {
     store.selectedPlan.name = name
     store.selectedPlan.price = price
+    localStorage.setItem('selectedPlan', JSON.stringify(store.selectedPlan))
   },
   // SET ADDONS
   setAddons (index: number): void {
@@ -43,6 +49,7 @@ export const actions = {
     } else {
       store.addons[index].selected = true
     }
+    localStorage.setItem('addons', JSON.stringify(store.addons))
   },
   clearLocalStorage (): void {
     localStorage.clear()
