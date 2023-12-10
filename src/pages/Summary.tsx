@@ -15,7 +15,7 @@ function Summary (): JSX.Element {
     actions.showThankYouPage()
   }
 
-  //   GO TO THANK YOU PAGE AFTER THE STATE CHANGES
+  // GO TO THANK YOU PAGE AFTER THE STATE CHANGES
   useEffect(() => {
     if (!showThankYouPage) return
     navigate('/thankyou')
